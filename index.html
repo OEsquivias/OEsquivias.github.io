@@ -5,14 +5,33 @@
 <title>7 desembre</title>
 <script>
 function startTime() {
+    // Real date
     var today = new Date();
+    var y = today.getFullYear();
+    var mo = today.getMonth() + 1;
+    var d = today.getDate();
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
+
+    // Count
+    var themoment = new Date(2015,11,7,17,0,0,0);
+    var diff = new Date(today - themoment);
+    var cy = diff.getYear() - 70;
+    var cmo = diff.getMonth();
+    var cd = diff.getDate();
+    var ch = diff.getHours();
+    var cm = diff.getMinutes();
+    var cs = diff.getSeconds();
+
+
+
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt').innerHTML =
-    h + ":" + m + ":" + s;
+    document.getElementById('youandme').innerHTML =
+    // d + "-" + mo + "-" + y + " " + h + ":" + m + ":" + s + "\n"
+    cy + "anys " + cmo + "mesos " + cd + "dies " + ch + "hores " + cm + "minuts " + cs + "segons";
+
     var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
@@ -24,7 +43,7 @@ function checkTime(i) {
 <!-- <body> -->
 <body onload="startTime()">
 
-<div id="txt"></div>
+<div id="youandme"></div>
   <div class="container">
     <input id="start" name="controls" type="radio"/>
     <input id="stop" name="controls" type="radio"/>
