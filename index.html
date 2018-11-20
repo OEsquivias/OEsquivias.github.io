@@ -15,14 +15,10 @@ function startTime() {
     var cm = diff.getMinutes();
     var cs = diff.getSeconds();
 
-
-
     cm = checkTime(cm);
     cs = checkTime(cs);
     document.getElementById('youandme').innerHTML =
     cy + " " + cmo + " " + cd + " " + ch + " " + cm + " " + cs;
-
-
 
     var t = setTimeout(startTime, 500);
 }
@@ -35,54 +31,7 @@ function checkTime(i) {
 <!-- <body> -->
 <body onload="startTime()">
 
-<div id="youandme"></div>
-  <!-- <div class="container">
-    <input id="start" name="controls" type="radio"/>
-    <input id="stop" name="controls" type="radio"/>
-    <input id="reset" name="controls" type="radio"/>
-    <div class="timer">
-      <div class="cell">
-        <div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-      <div class="cell">
-        <div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-      <div class="cell divider">
-        <div class="numbers">:</div>
-      </div>
-      <div class="cell">
-        <div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
-      </div>
-      <div class="cell">
-        <div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-      <div class="cell divider">
-        <div class="numbers">:</div>
-      </div>
-      <div class="cell">
-        <div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
-      </div>
-      <div class="cell">
-        <div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-      <div class="cell divider">
-        <div class="numbers">.</div>
-      </div>
-      <div class="cell">
-        <div class="numbers millisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-      <div class="cell">
-        <div class="numbers tenmillisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-      <div class="cell">
-        <div class="numbers hundredmillisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-      </div>
-    </div>
-    <div class="timer-controls">
-      <label for="start"> <i class="fa fa-play"></i></label>
-      <label for="stop"><i class="fa fa-pause"></i></label>
-      <label for="reset"><i class="fa fa-refresh"></i></label>
-    </div> -->
+  <div id="youandme"></div>
   </div>
 </body>
 </html>
