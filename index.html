@@ -5,17 +5,8 @@
 <title>7 desembre</title>
 <script>
 function startTime() {
-    // Real date
     var today = new Date();
-    var y = today.getFullYear();
-    var mo = today.getMonth() + 1;
-    var d = today.getDate();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-
-    // Count
-    var themoment = new Date(2015,11,7,17,0,0,0);
+    var themoment = new Date(2015,11,7,16,30,0,0);
     var diff = new Date(today - themoment);
     var cy = diff.getYear() - 70;
     var cmo = diff.getMonth();
@@ -26,11 +17,12 @@ function startTime() {
 
 
 
-    m = checkTime(m);
-    s = checkTime(s);
+    cm = checkTime(cm);
+    cs = checkTime(cs);
     document.getElementById('youandme').innerHTML =
-    // d + "-" + mo + "-" + y + " " + h + ":" + m + ":" + s + "\n"
-    cy + "anys " + cmo + "mesos " + cd + "dies " + ch + "hores " + cm + "minuts " + cs + "segons";
+    cy + " " + cmo + " " + cd + " " + ch + " " + cm + " " + cs;
+
+
 
     var t = setTimeout(startTime, 500);
 }
@@ -44,7 +36,7 @@ function checkTime(i) {
 <body onload="startTime()">
 
 <div id="youandme"></div>
-  <div class="container">
+  <!-- <div class="container">
     <input id="start" name="controls" type="radio"/>
     <input id="stop" name="controls" type="radio"/>
     <input id="reset" name="controls" type="radio"/>
@@ -90,7 +82,7 @@ function checkTime(i) {
       <label for="start"> <i class="fa fa-play"></i></label>
       <label for="stop"><i class="fa fa-pause"></i></label>
       <label for="reset"><i class="fa fa-refresh"></i></label>
-    </div>
+    </div> -->
   </div>
 </body>
 </html>
